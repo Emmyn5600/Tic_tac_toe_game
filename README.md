@@ -33,15 +33,15 @@ Setup by  following the installation instructions below :
 * Open your terminal and locate on the folder you want to clone the repository.
 
 * Setup
-- Create a new folder/directory for the project
-- Be sure to have a Github account and that this account is connected locally on your PC
+ Create a new folder/directory for the project
+ Be sure to have a Github account and that this account is connected locally on your PC
 
 * Install
-- Go to the desired directory on your terminal
-- git clone https://github.com/Emmyn5600/Tic_tac_toe_game.git
+ Go to the desired directory on your terminal
+ git clone https://github.com/Emmyn5600/Tic_tac_toe_game.git
 
 * Run
-- On your terminal, type bin/main.rb
+ On your terminal, type bin/main.rb
 
 ### Install
 
