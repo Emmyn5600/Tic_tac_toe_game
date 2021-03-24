@@ -1,9 +1,28 @@
 #!/usr/bin/env ruby
 puts "Welcome to Ruby's Tic-Tac-Toe!"
 puts "\nEnter Player 1 name:"
-player1 = gets.chomp.capitalize
+player1 = gets.chomp
+while player1.to_s.strip.empty?
+  if player1.to_s.strip.empty?
+    puts 'Enter a valid name!'
+    player1 = gets.chomp
+  else
+    player1 = player1.to_s.capitalize
+  end
+end
+
 puts "\nEnter Player 2 name:"
-player2 = gets.chomp.capitalize
+player2 = gets.chomp
+
+while player2.to_s.strip.empty?
+  if player2.to_s.strip.empty?
+    puts 'Enter a valid name!'
+    player2 = gets.chomp
+  else
+    player2 = player2.to_s.capitalize
+  end
+end
+
 puts "\n#{player1} will play with X and #{player2} will play with O"
 puts "\nLets Start!"
 puts '[press ENTER to start]'
