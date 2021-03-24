@@ -4,7 +4,6 @@ require_relative '../lib/helper.rb'
 require_relative '../lib/player.rb'
 
 class TicTacToe
-      attr_accessor: @board 
 
     def initialize
         @board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
@@ -48,8 +47,7 @@ class TicTacToe
             @counter
         end
         @counter
-    end
-    
+    end  
 end
 
 
