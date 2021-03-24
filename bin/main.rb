@@ -5,24 +5,24 @@ require_relative '../lib/helper'
 
 class TicTacToe
   def initialize
-    @_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    @board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     @name = []
     @helper = Helper.new
     @game_over = false
     @counter = 0
   end
 
-  def start
+  def begin
     puts 'Welcome to TIC-TAC-TOE'
     puts ''
   end
 
-  def display_board
-    puts "  #{@_board[0]}, #{@_board[1]}, #{@_board[2]}"
+  def show_board
+    puts "  #{@board[0]}, #{@board[1]}, #{@board[2]}"
     puts separator = '-----------'
-    puts "  #{@_board[3]}, #{@_board[4]}, #{@_board[5]}"
+    puts "  #{@board[3]}, #{@board[4]}, #{@board[5]}"
     puts separator
-    puts "  #{@_board[6]}, #{@_board[7]}, #{@_board[8]}"
+    puts "  #{@board[6]}, #{@board[7]}, #{@board[8]}"
     puts ''
   end
 
@@ -30,14 +30,14 @@ class TicTacToe
     user_input.to_i - 1
   end
 
-  def move_on_board(index)
-    @_board[index] = @player.token
+  def move_board(index)
+    @board[index] = @player.token
   end
 
   def turn_count
-    if @_board.include?('X')
+    if @board.include?('X')
       @counter += 1
-    elsif @_board.include?('O')
+    elsif @board.include?('O')
       @counter += 1
     else
       @counter
@@ -53,13 +53,13 @@ class TicTacToe
       puts 'Please enter a valid move'
       player_play = gets.strip.to_i
     end
-    until @helper.valid_move?(@_board, player_move(player_play))
+    until @helper.valid_move?(@board, player_move(player_play))
       puts "#{@player.name}, Invalid number. Choose another number between 1-9"
       player_play = gets.strip.to_i
     end
-    move_on_board(player_move(player_play))
-    display_board
-    if @helper.won?(@_board)
+    move_board(player_move(player_play))
+    show_board
+    if @helper.won?(@board)
       puts "Congratulations #{@player.name} you won!!!"
       @game_over = true
     elsif @helper.draw?(turn_count)
@@ -92,7 +92,7 @@ class TicTacToe
     sleep 1
   end
 
-  def greeting
+  def player_names
     puts "Today our players are: #{@name[0].name} and #{@name[1].name}"
     puts ''
     sleep 1
@@ -104,14 +104,12 @@ class TicTacToe
   end
 
   def execute
-    start
     system('clear')
     names_of_users
-    greeting
+    player_names
     puts ''
     turn until @game_over
   end
-end
 
-play_game = TicTacToe.new
-play_game.execute
+  play_game = TicTacToe.new
+  play_game.execute; end

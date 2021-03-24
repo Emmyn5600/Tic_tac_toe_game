@@ -1,8 +1,8 @@
-class Player 
-    attr_accessor :name, :token
+class Player
+  attr_accessor :name, :token
 
-    def initialize(name, token)
-      @name = name
-      @token = token
-    end
+  def initialize(name, token)
+    @name = name
+    @token = token
   end
+end
