@@ -1,9 +1,35 @@
 #!/usr/bin/env ruby
 
-require_relative "board.rb"
-require_relative "display.rb"
+require_relative '../lib/helper.rb'
+require_relative '../lib/player.rb'
 
-display = Display.new 
+class TicTacToe
+      attr_accessor: @board 
+
+    def initialize
+        @board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+        @name = []
+        @helper = Helpers.new
+        @game_over = false
+        @counter = 0
+    end    
+
+    def begin
+        puts "Welcome to TIC-TAC-TOE"
+        puts " "
+        sleep 1
+        puts "A simple game developed by Tiago and Emmy"
+        puts " "
+        sleep 1
+    end
+end
+
+
+
+
+
+
+=begin
 puts display.display_name_prompt(1)
 player1 = gets.chomp.capitalize
 puts display.display_name_prompt(2)
@@ -32,3 +58,5 @@ case user_input2.to_i
 when 1 then puts 'You are the winner!'
 when 2 then puts 'It is a tie!'
 end
+
+=end
