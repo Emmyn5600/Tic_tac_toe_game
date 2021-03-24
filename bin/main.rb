@@ -36,13 +36,10 @@ class TicTacToe
 
   def turn_count
     a = @board.include?('X')
-    b = @board.include?('O')
 
     case @counter
-    when a
-      @counter += 1
 
-    when b
+    when a
       @counter += 1
     else
       @counter
@@ -78,7 +75,7 @@ class TicTacToe
 
     2.times do |item|
       puts 'Please enter names of players: '
-      player_name = gets.chomp.strip
+      player_name = gets.chomp.strip.capitalize
       puts ''
 
       while player_name.empty?
