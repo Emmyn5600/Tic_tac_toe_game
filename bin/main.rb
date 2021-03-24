@@ -29,10 +29,13 @@ display_board(board)
 puts "\n#{player_1} Enter a number between 1 and 9"
 user_input_1 = gets.chomp.to_i
 
-if user_input_1 = board[index]
-  board[element] = 99
-else 
-  puts "\nEnter a valid number!"
-end
+i=0
 
-puts board
+while i<=3
+    if user_input_1 < 1 || user_input_1 >9
+        puts "Enter valid number"
+    else
+        puts "Cool"
+        i+=1
+    end
+end
