@@ -1,43 +1,64 @@
 #!/usr/bin/env ruby
-# puts 'Hello World!'
-
-puts "\nWelcome to the Ruby's Tic Tac Toe game"
-
-puts "\nEnter your player 1 name"
+puts "Welcome to Ruby's Tic-Tac-Toe!"
+puts "\nEnter Player 1 name:"
 player1 = gets.chomp.capitalize
-
-puts "\nEnter your player 2 name"
+puts "\nEnter Player 2 name:"
 player2 = gets.chomp.capitalize
+puts "\n#{player1} will play with X and #{player2} will play with O"
+puts "\nLets Start!"
+puts '[press ENTER to start]'
+gets
 
-puts "\n#{player1} will play with x and #{player2} will play with o"
+p_turn = player1
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+i = 0
 
-puts "\nLet's start the game"
-puts "\nChoose the letters between 1 and 9 to place your mark on the board"
+(0..arr.length - 1).each do |_i|
+  puts "| #{arr[0]} | #{arr[1]} | #{arr[2]} |"
+  puts '+---+---+---+'
+  puts "| #{arr[3]} | #{arr[4]} | #{arr[5]} |"
+  puts '+---+---+---+'
+  puts "| #{arr[6]} | #{arr[7]} | #{arr[8]} |"
+  puts "\n"
+  puts "It's #{p_turn}'s turn!"
+  puts "\nPlease select an available spot from the board:"
+  arr_el = gets.chomp
 
-board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  while (arr_el =~ /\D/) || arr_el.empty? || arr[arr_el.to_i - 1] =~ /\D/
+    puts "\nInvalid move. please enter a number from 1-9"
+    arr_el = gets.chomp
+  end
 
-def display_board(board)
-  puts "\n #{board[0]} | #{board[1]} | #{board[2]} "
-  puts '-----------'
-  puts " #{board[3]} | #{board[4]} | #{board[5]} "
-  puts '-----------'
-  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+  if p_turn == player1
+    arr[arr_el.to_i - 1] = 'X'
+    p_turn = player2
+  else
+    arr[arr_el.to_i - 1] = 'O'
+    p_turn = player1
+  end
+
+  if i == 3
+    puts "\nIt's a DRAW!"
+    puts "\n#{player1}, #{player2}, that was a great game!"
+    gets
+  end
+  i += 1
 end
-display_board(board)
 
-puts "\n#{player1} Enter a number between 1 and 9"
-user_input1 = gets.chomp
+result = player1
 
-case user_input1.to_i
-when 1 then puts 'You are the winner!'
-when 2 then puts 'It is a tie!'
-end
+puts "| #{arr[0]} | #{arr[1]} | #{arr[2]} |"
+puts '+---+---+---+'
+puts "| #{arr[3]} | #{arr[4]} | #{arr[5]} |"
+puts '+---+---+---+'
+puts "| #{arr[6]} | #{arr[7]} | #{arr[8]} |"
 
-display_board(board)
-puts "\n#{player2} Enter a number between 1 and 9"
-user_input2 = gets.chomp
+if result == player1 || result == player2
+  puts "\nCONGRATULATIONS!"
+  puts "\n#{result} you WIN the game!"
 
-case user_input2.to_i
-when 1 then puts 'You are the winner!'
-when 2 then puts 'It is a tie!'
+else
+  puts "\nIt's a DRAW!"
+  puts "\n#{player1}, #{player2}, that was a great game!"
+
 end
