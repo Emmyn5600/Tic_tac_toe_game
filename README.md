@@ -8,7 +8,24 @@
 
 ## Built With
 
-- Ruby
+<img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white">
+
+## Game Instructions
+
+### How do we play Tic Tac Toe?
+
+- Players take turns playing
+- 1st turn — Player 1
+- Player 1 places their token (X) in only 1 square of their choice
+- 2nd turn — Player 2
+- Player 2 places their token (O) in only 1 square of their choice, except they can’t touch the square that Player 1’s token already fills
+- 3rd turn- Player 1 …. and the cycle continues until a player wins or there’s a tie game
+- There are 8 winning combinations: Top row, Middle row, Bottom row, Left column, Middle column, Right column, Left diagonal, and Right diagonal
+- There’s a draw/tie when the entire board is filled with X’s and O’s but no winning combinations can be found
+
+### A winning combination should look like
+
+![](./assets/tic_winner.png)
 
 ## Getting Started
 
@@ -86,7 +103,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Thanks to Microverse and their supportive community.
-- Thanks to everyone commiting in this project.
+- Thanks to everyone committing to this project.
 
 ## 📝 License
 

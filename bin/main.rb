@@ -15,6 +15,32 @@ class TicTacToe
   def begin
     puts 'Welcome to TIC-TAC-TOE'
     puts ''
+    sleep 1
+    puts 'A Tic Tac Toe game developed by Tiago and Emmy'
+    puts ''
+    sleep 1
+  end
+
+  def instructions
+    sleep 1
+    puts "Players take turns playing\n"
+    puts "1st turn — \b Player 1 places their token (X) in only 1 square of their choice"
+    puts "2nd turn — \b Player 2 places their token (O) in only 1 square of their choice"
+    puts '3rd turn- Player 1 …. and the cycle continues until a player wins or there’s a tie game'
+    puts 'There are 8 winning combinations: Try to find them all!'
+    puts 'There’s a draw/tie when the entire board is filled with X’s and O’s but no winning combinations can be found'
+    puts "Don't choose squares that are already occupied\n\n"
+    puts '    -------------'
+    puts '    | 1 | 2 | 3 |'
+    puts '    -------------'
+    puts '    | 4 | 5 | 6 |'
+    puts '    -------------'
+    puts '    | 7 | 8 | 9 |'
+    puts '    -------------'
+    puts "\nThe winner is the first one to form a line with 3 symbols vertically, horizontally or diagonally\n\n"
+    puts 'Press Enter to continue'
+    gets.chomp
+    system 'clear'
   end
 
   def show_board
@@ -107,6 +133,7 @@ class TicTacToe
 
   def execute
     system('clear')
+    instructions
     names_of_users
     player_names
     puts ''
