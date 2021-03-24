@@ -1,17 +1,14 @@
 #!/usr/bin/env ruby
 
 require_relative "board.rb"
+require_relative "display.rb"
 
-puts "\nWelcome to the Ruby's Tic Tac Toe game"
-
-puts "\nEnter your player 1 name"
+display = Display.new 
+puts display.display_name_prompt(1)
 player1 = gets.chomp.capitalize
-
-puts "\nEnter your player 2 name"
-player2 = gets.chomp.capitalize
+puts display.display_name_prompt(2)
 
 puts "\n#{player1} will play with x and #{player2} will play with o"
-
 puts "\nLet's start the game"
 puts "\nChoose the letters between 1 and 9 to place your mark on the board"
 
@@ -35,31 +32,3 @@ case user_input2.to_i
 when 1 then puts 'You are the winner!'
 when 2 then puts 'It is a tie!'
 end
-
-
-
-
-
-
-
-=begin
-class TicTacToe
-    attr_accessor :board
-
-    def initialize(board)
-        @board = ['', '', '', '', '', '', '', '', '']
-    end
-
-    WIN_COMBINATIONS = [ 
-        [0,1,2], # top_row 
-        [3,4,5], # middle_row 
-        [6,7,8], # bottom_row 
-        [0,3,6], # left_column 
-        [1,4,7], # center_column 
-        [2,5,8], # right_column 
-        [0,4,8], # left_diagonal 
-        [6,4,2] # right_diagonal 
-        ]
-    
-
-=end
