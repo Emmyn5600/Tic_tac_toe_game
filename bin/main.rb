@@ -35,9 +35,14 @@ class TicTacToe
   end
 
   def turn_count
-    if @board.include?('X')
+    a = @board.include?('X')
+    b = @board.include?('O')
+
+    case @counter
+    when a
       @counter += 1
-    elsif @board.include?('O')
+
+    when b
       @counter += 1
     else
       @counter
