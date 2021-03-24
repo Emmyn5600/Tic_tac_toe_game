@@ -25,10 +25,10 @@ class TicTacToe
     sleep 1
     puts "Players take turns playing\n"
     puts "1st turn — \b Player 1 places their token (X) in only 1 square of their choice"
-    puts "2nd turn — \b Player 2 places their token (O) in only 1 square of their choice, except they can’t touch the square that Player 1’s token already fills"
-    puts "3rd turn- Player 1 …. and the cycle continues until a player wins or there’s a tie game"
-    puts "There are 8 winning combinations: Top row, Middle row, Bottom row, Left column, Middle column, Right column, Left diagonal, and Right diagonal"
-    puts "There’s a draw/tie when the entire board is filled with X’s and O’s but no winning combinations can be found"
+    puts "2nd turn — \b Player 2 places their token (O) in only 1 square of their choice"
+    puts '3rd turn- Player 1 …. and the cycle continues until a player wins or there’s a tie game'
+    puts 'There are 8 winning combinations: Try to find them all!'
+    puts 'There’s a draw/tie when the entire board is filled with X’s and O’s but no winning combinations can be found'
     puts "Don't choose squares that are already occupied\n\n"
     puts '    -------------'
     puts '    | 1 | 2 | 3 |'
