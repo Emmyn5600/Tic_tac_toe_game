@@ -22,6 +22,34 @@ class TicTacToe
         puts " "
         sleep 1
     end
+
+    def display_board(board)
+        puts "\n #{board[0]} | #{board[1]} | #{board[2]} "
+        puts '-----------'
+        puts " #{board[3]} | #{board[4]} | #{board[5]} "
+        puts '-----------'
+        puts " #{board[6]} | #{board[7]} | #{board[8]} "
+    end
+
+    def player_move(user_input)
+        user_input.to_i - 1
+    end
+
+    def move_on_board(index)
+        @_board[index] = @player.token
+    end
+
+    def turn_count
+        if @_board.include?('X')
+            @counter += 1
+        elsif @_board.include?('O')
+            @counter += 1
+        else
+            @counter
+        end
+        @counter
+    end
+    
 end
 
 
