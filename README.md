@@ -103,7 +103,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Thanks to Microverse and their supportive community.
-- Thanks to everyone commiting in this project.
+- Thanks to everyone committing to this project.
 
 ## 📝 License
 
