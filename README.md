@@ -12,7 +12,7 @@
 
 ## Game Instructions
 
-* How do we play Tic Tac Toe?
+### How do we play Tic Tac Toe?
 
 - Players take turns playing
 - 1st turn — Player 1
@@ -23,7 +23,7 @@
 - There are 8 winning combinations: Top row, Middle row, Bottom row, Left column, Middle column, Right column, Left diagonal, and Right diagonal
 - There’s a draw/tie when the entire board is filled with X’s and O’s but no winning combinations can be found
 
-* A winning combination should look like
+### A winning combination should look like
 
 ![](./assets/tic_winner.png)
 
@@ -103,7 +103,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Thanks to Microverse and their supportive community.
-- Thanks to everyone commiting in this project.
+- Thanks to everyone committing to this project.
 
 ## 📝 License
 
